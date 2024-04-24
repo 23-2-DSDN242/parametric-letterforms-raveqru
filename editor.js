@@ -4,10 +4,34 @@
  * and each row should be:
  * ["object_field", minimum_bound, maximum_bound]
  */
+
+//paraemters go here(to asjust)
 const sliderInfo = [
-  ["size",       0, 100],
-  ["offsetx",  -30,  30],
-  ["offsety", -100, 100]
+  ["stroke1_posY", 0, 200],
+  ["stroke1_width", 0, 100],
+  ["stroke1_height", -100, 200],
+  ["angle_set", 0, 360],
+
+  ["right_posX", 0, 100],
+  ["right_posY", 0, 200],
+  ["right_width", 0, 100],
+  ["right_height", 0, 200],
+  ["angle_set2", -360, 0],
+
+  //["topRectX", 0, 100],
+  ["topRectY", 0, 200],
+  ["topWidth", 0, 100],
+  ["topHeight", 0, 200],
+
+
+  ["stroke2_posX", 0, 100],
+  ["stroke2_posY", 0, 200],
+  ["stroke2_width", 0, 100],
+  ["stroke2_height", 0, 200],
+
+
+
+
 ];
 
 // PROBABLY DON'T NEED TO EDIT ANYTHING ELSE. STOP HERE.
@@ -15,7 +39,7 @@ const sliderInfo = [
 const numSliders = sliderInfo.length;
 
 if (typeof systemBackgroundColor === 'undefined') {
-    var systemBackgroundColor = "#e3eded";
+  var systemBackgroundColor = "#e3eded";
 }
 
 // this will use variables if they are already defined
@@ -24,7 +48,7 @@ if (typeof systemBackgroundColor === 'undefined') {
 // if everything is defined above, this should just work
 function sliderToDataObject() {
   let obj = {};
-  for (let i=0; i<numSliders; i=i+1) {
+  for (let i = 0; i < numSliders; i = i + 1) {
     o_name = sliderInfo[i][0]
     bounds_low = sliderInfo[i][1]
     bounds_high = sliderInfo[i][2]
@@ -42,7 +66,7 @@ const canvasHeight = 500;
 
 let debugBox = false;
 
-function setup () {
+function setup() {
   // create the drawing canvas, save the canvas element
   main_canvas = createCanvas(canvasWidth, canvasHeight);
   main_canvas.parent('canvasContainer');
@@ -50,11 +74,11 @@ function setup () {
   // rotation in degrees (more slider friendly)
   angleMode(DEGREES);
 
-  for(let i=0; i<numSliders; i++) {
-    let cur_row = select("#row" + (i+1))
+  for (let i = 0; i < numSliders; i++) {
+    let cur_row = select("#row" + (i + 1))
     cur_row.show();
     let cur_slider = createSlider(0, 100, 50)
-    let containerString = "slider" + (i+1) + "Container"
+    let containerString = "slider" + (i + 1) + "Container"
     cur_slider.parent(containerString);
     param_sliders.push(cur_slider);
   }
@@ -70,7 +94,7 @@ function buttonPressedEvent() {
   alert(json);
 }
 
-function draw () {
+function draw() {
   // clear screen
   background(systemBackgroundColor);
 
@@ -81,7 +105,7 @@ function draw () {
   // draw the letters A, B, C from saved data
   push();
   scale(2);
-  translate(width/4 - 50, 25);
+  translate(width / 4 - 50, 25);
 
   if (debugBox) {
     noFill()
