@@ -1,15 +1,8 @@
-/*******
- * define this "sliderInfo" variable
- * have an entry for each slider you want
- * and each row should be:
- * ["object_field", minimum_bound, maximum_bound]
- */
-
-//paraemters go here(to asjust)
+//paraemters go here
 const sliderInfo = [
   ["stroke1_posY", 0, 200],
   ["stroke1_width", 0, 100],
-  ["stroke1_height", -100, 200],
+  ["stroke1_height", 0, 200],
   ["angle_set", 0, 360],
 
   ["right_posX", 0, 100],
@@ -18,20 +11,14 @@ const sliderInfo = [
   ["right_height", 0, 200],
   ["angle_set2", -360, 0],
 
-  //["topRectX", 0, 100],
   ["topRectY", 0, 200],
   ["topWidth", 0, 100],
   ["topHeight", 0, 200],
-
 
   ["stroke2_posX", 0, 100],
   ["stroke2_posY", 0, 200],
   ["stroke2_width", 0, 100],
   ["stroke2_height", 0, 200],
-
-
-
-
 ];
 
 // PROBABLY DON'T NEED TO EDIT ANYTHING ELSE. STOP HERE.
