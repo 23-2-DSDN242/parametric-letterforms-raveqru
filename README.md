@@ -1,6 +1,7 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/xQz3oEP8)
 ## MDDN 242 2024 Assignment 2
-
+This typeface draws its inspiration from the Bauhaus artistic movement, known for its innovative approach, simplicity and functionality which what we’re after in this project. Simple, functional and aesthetically pleasing.
+Reflecting on this project, I can say that I'm happy with the result, but I would add more details to the overall outcome, such as designing HTML elements. Additionally, I would have worked more on the interaction process. Furthermore, I would have put more time into the process of the initial idea to make it more logical, so that there’s no complications and issues along the way. 
 Each of the letter contains 4 rectangles, the round corners are fixed but most of the parameters are changable, such as x,y offset, width and height and rotation, although some rectangles may exclude certain parameters. The available and changeable parameters are shown below:
 
 Red stroke rectangle:
